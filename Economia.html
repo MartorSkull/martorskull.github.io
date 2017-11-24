@@ -1,0 +1,1866 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>Economia</title></head><body><article class="markdown-body"><h1 id="economia-y-gestion-de-la-produccion-indusrtial"><a name="user-content-economia-y-gestion-de-la-produccion-indusrtial" href="#economia-y-gestion-de-la-produccion-indusrtial" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Economia y Gestion de La produccion indusrtial</h1>
+<h2 id="indice"><a name="user-content-indice" href="#indice" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Indice</h2>
+<!-- MarkdownTOC -->
+
+<ul>
+<li>Economia y Gestion de La produccion indusrtial</li>
+<li>Economia como ciencia</li>
+<li>Clasificacion de la economia:<ul>
+<li>Economia positiva</li>
+<li>Economia normativa</li>
+</ul>
+</li>
+<li>Agentes economicos</li>
+<li>Factores Productivos(Familia):</li>
+<li>Sectores de la produccion<ul>
+<li>Los Agentes Economicos (Familia-Empresa-Estado)</li>
+<li>Las Familias en el circuito Economico ponen a disposicion los factores productivos;</li>
+</ul>
+</li>
+<li>Salarios Vs Oferta de trabajo</li>
+<li>Distribucion del Ingreso</li>
+<li>Curva de Lorenz</li>
+<li>La Demanda<ul>
+<li>Ley de la demanda</li>
+<li>Utilidad y preferencia</li>
+</ul>
+</li>
+<li>Mapa conceptual La Demanda<ul>
+<li>Analisis de la demanda de Leche durante un mes</li>
+</ul>
+</li>
+<li>PONER IMAGEN DE GRAFICO<ul>
+<li>Cambios en las Expectativas del consumidor</li>
+<li>Cambios en el numero o composicion de los consumidores</li>
+<li>Cambios en los gustos del consumidor</li>
+</ul>
+</li>
+<li>Elasticidad</li>
+<li>La Produccion / La Oferta</li>
+<li>Posibilidades de la Produccion</li>
+<li>Frontera de Posibilidades de Produccion</li>
+<li>La Funcion de Produccion</li>
+<li>Produccion y Costos<ul>
+<li>Costos</li>
+</ul>
+</li>
+<li>La Oferta</li>
+<li>El Mercado: Lugar de encuentro entre oferta y demanda.<ul>
+<li>Mercado segun numero participantes</li>
+</ul>
+</li>
+<li>Macroeconomia<ul>
+<li>Sector Externo: Balanza de pagos</li>
+<li>Clasificacion Estadistica Economica Argentina de las Exportaciones e Importaciones</li>
+<li>Exportaciones</li>
+<li>Importaciones</li>
+<li>Sector Publico: Recursos y Gastos</li>
+<li>Sistema Tributario Argentino</li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+
+<h1 id="economia-y-gestion-de-la-produccion-indusrtial_1"><a name="user-content-economia-y-gestion-de-la-produccion-indusrtial_1" href="#economia-y-gestion-de-la-produccion-indusrtial_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Economia y Gestion de La produccion indusrtial</h1>
+<ul>
+<li>Actividad economica: Se llama actividad economica a toda actividad humana que modifica el conjunto de medios utiles y escazos a disposicion de un sujeto(individuo o grupo social) para los fines de la vida</li>
+</ul>
+<h2 id="economia-como-ciencia"><a name="user-content-economia-como-ciencia" href="#economia-como-ciencia" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Economia como ciencia</h2>
+<p>Es la ciencia que estudia la asignacions mas conveniente de los recursos escasos de una sociedad para la obtencion de un conjunto ordenado de objetivos</p>
+<ol>
+<li><strong>Observacion</strong>: Se preocupa la manera en que se administran los recursos ezcasos con el objeto de producir bienes/servicios y distribuirlos en la sociedad</li>
+<li><strong>Observacion</strong>: tanto los individuos como las empresas frenre a los problemas recurren a la economia que pretende ofrecer un metodo paraa ordenar y establecer prioridades en la toma de decisiones para satisfacer las necesidades (&ldquo;Ciencia de la eleccion&rdquo;)</li>
+<li><strong>Observacion</strong>: La economia no estudia un area o campo de la actividad humana, sino un aspecto de la actividad humana: el intento de satisfacer necesidades materiales que implica <strong>ELEGIR</strong> entre varias opciones.<br />
+<pre><code>               +-- Necesidades Humanas
+               |      &quot;ilimitadas&quot;
+               |            |
+               |            |
+               |            |
+    Problema __|           +-+              No es un
+    Economico  |           |?|------------- Problema 
+               |           +-+              Tecnologico
+               |            |
+               |            |
+               +-- Recursos Economicos
+                       Limitados
+</code></pre><br />
+<strong>RECORDEMOS</strong>: Para que halla economia debe haber modificacion de un recurso escaso y la toma de una desicion.</li>
+</ol>
+<h2 id="clasificacion-de-la-economia"><a name="user-content-clasificacion-de-la-economia" href="#clasificacion-de-la-economia" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Clasificacion de la economia:</h2>
+<p>Recordemos que la economia se encuentra dentro de las ramas de las ciencias sociales, donde el objeto de estudio y su metodo difieren de las ciencias naturales; La economia aplica el metodo deductivo.</p>
+<p><strong>Objeto de estudo de la economia segun los autores</strong>:</p>
+<ul>
+<li><strong>Adam Smith</strong>: La naturaleza y al causa de la riqueza de las naciones.</li>
+<li><strong>David Ricardo</strong>: La distribucion de la riqueza entre las clases sociales.</li>
+<li><strong>Karl Marx</strong>: La dinamica del surgimiento, el desarrollo y la crisis del capitalismo.</li>
+<li><strong>Alfred Marshall</strong>: La maximisasion de la satisfaccion individual dado el problema de objetivos multiples y recursos escasos.</li>
+<li><strong>John Keynes</strong>: La politica economica que permita alcanzar el pleno empleo.</li>
+</ul>
+<h3 id="economia-positiva"><a name="user-content-economia-positiva" href="#economia-positiva" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Economia positiva</h3>
+<p>Aquella que se limita a describir los fenomenos economicos. Ej.: La ley de la oferta y al demanda.</p>
+<h3 id="economia-normativa"><a name="user-content-economia-normativa" href="#economia-normativa" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Economia normativa</h3>
+<p>Opina sobre los objetivos a alcanzar por la actividad economica, ya sea een terminos individuales o de accion del estado. Ej: La igualdad, la libertad del consumidor, el fortalecimiento de una nacion.<br />
+Los distintos sistemas que constituyen la economia normativa son lo que se denomina economia politica:</p>
+<ul>
+<li>liberalismo economico</li>
+<li>Socialismo</li>
+<li>Mercantilismo</li>
+</ul>
+<p>Actividad:</p>
+<ol>
+<li>Buscar en medio electonico o en papel un articulo de aspectos economicos e identificar conceptos teoricos de lo visto hasta ahora. El contenido del articulo minimo una carilla</li>
+</ol>
+<p>Actividad:</p>
+<ol>
+<li>Piensen como funciona la economia en su familia</li>
+</ol>
+<h2 id="agentes-economicos"><a name="user-content-agentes-economicos" href="#agentes-economicos" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Agentes economicos</h2>
+<p>En toda actividad de produccion y distribucion economica intervienen 3 agentes</p>
+<ol>
+<li><strong>Familia</strong>: Tiene un doble papel en la economia: <ol>
+<li>Por un lado son Unidades elementales de consumo(Bienes y servicios) y tambien determinan que se producira</li>
+<li>Asi mismo son las propietarias de lo que se llaman recursos o factores productivos</li>
+</ol>
+</li>
+<li><strong>Empresas</strong>: Unidades economicas productoras de bienes y servicios, que combinando factores de produccion buscan obtener una ganancia.</li>
+<li><strong>Estado</strong>: Importante agente economico que interviene ofreciendo y demandando bienes y servicios y regulandola actividad economica de los otros agentes; asi mismo establece &ldquo;las reglas del juego&rdquo; en el circuitos economicos. En general se trata que el peso del sector publico en el PBI(Producot Pruto Interno) sea lo menor posible. En la argentina el estado gasta dinero para proveer los llamados bienes publico, osea un bien que esta disponible para el consumo de toda la sociedad sin importar quien paga y quien no. Ej: Bomberos, plazas, seguridad y justicia. Tambien gasta en la educacion, en salud y en seguridad social.</li>
+</ol>
+<h2 id="factores-productivosfamilia"><a name="user-content-factores-productivosfamilia" href="#factores-productivosfamilia" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Factores Productivos(Familia):</h2>
+<ul>
+<li>Tierra</li>
+<li>Trabajo</li>
+<li>Capital<br />
+<pre><code>                          +--- Bien Durable: Un objeto que tiene muchos usos
+                          |
+            +--- consumo -+--- Bien no durable: un objeto que se utiliza una vez, desechable
+            |             |
+            |             +--- Servicios: Todo lo que no se a un bien.
+            |
+Familia-----+--- Ahorro
+            |
+            |
+            |
+            +--- Impuestos
+
+                                  +--- Ventaja: Todas las ganancias van para el individuo
+              +--- Individuales --| 
+              |                   +--- Desventaja: el propietario afronta responsabilidad ilimitada por las deudas y/o riesgos de su empresa(responde con la totalidad de su patrimonio)
+              |
+Empresas------|
+              |                           +--- SA(Sociedad Anonima): Pueden llegar a tener miles de accionistas y las acciones pueden ser negociadas.Ventaja: se puede comprar gran cantidad de dinero a costo 0
+              |                           |
+              +--- Colectivas/Sociedades--|
+                                          |
+                                          +--- SRL(Sociedad de Responsabilidad Limitada): En esta los socios no responden con sus bienes personales.
+                                          |
+                                          +--- SA de CV: 
+</code></pre></li>
+</ul>
+<p>Circuito de Produccion, Intercambio y Consumo:</p>
+<p><img alt="Flujo circular de la economia" src="/run/media/martin/Shared/Carpetas/Economia/img/FCE.png" /></p>
+<hr />
+<p>Debates Economicos atravez del tiempo<br />
+<pre><code>  +--Estado vs Mercado: Mecantilismo y fisiocracia
+1-|
+  +--Economia Politica: Adam Smith (Clasico)
+
+  +--Librecambio en comercio internacional: David Ricardo (Clasico)
+2-|
+  +--Capital y trabajo-la Plusvalia: Marx (Clasico)
+
+  +--Economia Neoclasica: Diferencias con los Clasicos
+3-|
+  +--1ra generacion Neoclasica: Jevons - Carl menger- Leon Walras
+
+4-2da Generacion Neoclasica: Alfred Marshal
+
+5-Desempleo-Intervencion del estado: Keynes
+</code></pre></p>
+<p>Temas a exponer:<br />
+- Epoca Historica-Acontecimentos principales en el mundo<br />
+- Argumentacion de la postura<br />
+- Principales exponentes<br />
+- Bibliografia generada</p>
+<hr />
+<h2 id="sectores-de-la-produccion"><a name="user-content-sectores-de-la-produccion" href="#sectores-de-la-produccion" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sectores de la produccion</h2>
+<h3 id="los-agentes-economicos-familia-empresa-estado"><a name="user-content-los-agentes-economicos-familia-empresa-estado" href="#los-agentes-economicos-familia-empresa-estado" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Los Agentes Economicos (Familia-Empresa-Estado)</h3>
+<p>Actuan en 3 grandes de produccion principalmente:</p>
+<ol>
+<li><strong>Sector Primario</strong>: Actividades Relacionadas con el sector productivo<ul>
+<li><strong>Tierra</strong>: Agricultura-Ganaderia-Pesca-Actividades Extractivas(Minerales-Forestal)</li>
+</ul>
+</li>
+<li><strong>Sector Secundario</strong>: Actividades industriales Donde se producen Bienes intermedios, bienes finales, bienes de Consumo</li>
+<li><strong>Sector Terciario</strong>: o de <strong>Servicios</strong>(Educacion- Financieros-Comunicaciones)</li>
+</ol>
+<h3 id="las-familias-en-el-circuito-economico-ponen-a-disposicion-los-factores-productivos"><a name="user-content-las-familias-en-el-circuito-economico-ponen-a-disposicion-los-factores-productivos" href="#las-familias-en-el-circuito-economico-ponen-a-disposicion-los-factores-productivos" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Las Familias en el circuito Economico ponen a disposicion los factores productivos;</h3>
+<p>a cambio de ello reciben:</p>
+<ul>
+<li>Ingresos por <strong>Rentas o Alquileres</strong> a cambio del <strong>FP Tierra</strong></li>
+<li>Sueldos/Salarios a cambio del <strong>FP Trabajo</strong></li>
+<li>Ganancias o intereses a cambio del <strong>FP Capital</strong></li>
+</ul>
+<h2 id="salarios-vs-oferta-de-trabajo"><a name="user-content-salarios-vs-oferta-de-trabajo" href="#salarios-vs-oferta-de-trabajo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Salarios Vs Oferta de trabajo</h2>
+<ul>
+<li>Empresas y Gobierno &ldquo;Compran&rdquo; la fuerza de trabajo a las familias</li>
+<li>El nivel de los salarios depende de michos factores, si bien en general:<br />
+<pre><code>    Desocupacion  -&gt;  Salarios /   Cuasi      -&gt; Salarios
+        Alta           Bajos  / Pleno empleo      Altos
+</code></pre></li>
+<li>Podemos graficar la <strong>oferta individual</strong> de trabajo como:</li>
+</ul>
+<p><img alt="Oferta Individual" src="/run/media/martin/Shared/Carpetas/Economia/img/OfertaIndividual.jpg" /></p>
+<h2 id="distribucion-del-ingreso"><a name="user-content-distribucion-del-ingreso" href="#distribucion-del-ingreso" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Distribucion del Ingreso</h2>
+<p><em>Deciles</em>: Diez grupos de igual tamano del Nro total de &ldquo;Familias Economicas&rdquo;.</p>
+<table>
+<thead>
+<tr>
+<th>Decil</th>
+<th>1990</th>
+<th>1995</th>
+<th>1998</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2,3</td>
+<td>1,6</td>
+<td>1,5</td>
+<td>+Pobre</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3,4</td>
+<td>2,7</td>
+<td>2,7</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>4,0</td>
+<td>3,9</td>
+<td>3,6</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>5,1</td>
+<td>4,9</td>
+<td>5,0</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>6,3</td>
+<td>6,1</td>
+<td>6,1</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>7,7</td>
+<td>7,4</td>
+<td>7,5</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>9,1</td>
+<td>9,0</td>
+<td>9,0</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>11,4</td>
+<td>11,3</td>
+<td>11,4</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>15,5</td>
+<td>15,4</td>
+<td>16,1</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>35,3</td>
+<td>37,3</td>
+<td>36,9</td>
+<td>+Rico</td>
+</tr>
+</tbody>
+</table>
+<p>El decil 1 (el 10% mas pobre) fue perdiendo sistematicamente su participacion en el ingreso: de 2,3% en el 90 a 1,5% en el 98; en  igual periodo los 2 segmentos mas ricos aumentaron su participacion en el ingreso. Tambien se observa que el decil 10 era en el 90 14 veces mayor su ingreso al del Decil 1 y en el 98 paso a ser de casi 24 veces mas.</p>
+<h2 id="curva-de-lorenz"><a name="user-content-curva-de-lorenz" href="#curva-de-lorenz" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Curva de Lorenz</h2>
+<p><img alt="Curva de Lorenz" src="/run/media/martin/Shared/Carpetas/Economia/img/CurvadeLorenz.jpg" /></p>
+<h1 id="la-demanda"><a name="user-content-la-demanda" href="#la-demanda" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>La Demanda</h1>
+<p>La demanda indica la cantidad de un producto que el consumidor esta dispuesto y puede comprar a cada uno de los posibles precios, si los demas factores de la economia permanecen constantes(Gustos, moras, ingresos de los consumidores).</p>
+<p><strong>Ceteris Paribus</strong>: &ldquo;Si todo lo demas permanece constante&rdquo;</p>
+<h3 id="ley-de-la-demanda"><a name="user-content-ley-de-la-demanda" href="#ley-de-la-demanda" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Ley de la demanda</h3>
+<p>La cantidad de un bien o servicio(Producto) <strong><em>DEMANDADO</em></strong> esta relacionada inversamente con su precio, si las demas variables se mantienen constantes(Ceteris Paribus).</p>
+<p><img alt="Ley de Demanda" src="/run/media/martin/Shared/Carpetas/Economia/img/LeydeDemanda.jpg" /></p>
+<p>Vemos el comportamiento de la demanda es similar a la variacion de una funcion de primer grado con pendiente negativa</p>
+<h3 id="utilidad-y-preferencia"><a name="user-content-utilidad-y-preferencia" href="#utilidad-y-preferencia" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Utilidad y preferencia</h3>
+<p>Terminos que estan estrechamente relacionados a la conducta del consumidor</p>
+<ul>
+<li>
+<p><strong>La Preferencia</strong>: indica la decicion de colocar un bien sobre otro</p>
+</li>
+<li>
+<p><strong>La utilidad</strong>: es lo que determina la compra de un bien ya que el mismo satisface una nececidad determinada</p>
+</li>
+</ul>
+<h2 id="mapa-conceptual-la-demanda"><a name="user-content-mapa-conceptual-la-demanda" href="#mapa-conceptual-la-demanda" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mapa conceptual La Demanda</h2>
+<p><img alt="Mapa conceptual La demanda" src="/run/media/martin/Shared/Carpetas/Economia/img/mcLD.png" /></p>
+<h3 id="analisis-de-la-demanda-de-leche-durante-un-mes"><a name="user-content-analisis-de-la-demanda-de-leche-durante-un-mes" href="#analisis-de-la-demanda-de-leche-durante-un-mes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Analisis de la demanda de Leche durante un mes</h3>
+<table>
+<thead>
+<tr>
+<th>Num</th>
+<th>Precio Por Litro($)</th>
+<th>Cantidad Demandada (ML)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1,25</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1,00</td>
+<td>14</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0,75</td>
+<td>20</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0,50</td>
+<td>26</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0,25</td>
+<td>32</td>
+</tr>
+</tbody>
+</table>
+<h1 id="poner-imagen-de-grafico"><a name="user-content-poner-imagen-de-grafico" href="#poner-imagen-de-grafico" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>PONER IMAGEN DE GRAFICO</h1>
+<p>Que sucede si varia el ingreso del consumidor? Y la restriccion presupuestaria?</p>
+<p>Cuando ocurre esto hay un desplazamiento de la curva a la derecha o a la izquierda en forma paralela(recordar que no hay variacion de precios = no me desplazo por la curva)</p>
+<p><img alt="Variacion de la curva de demanda" src="/run/media/martin/Shared/Carpetas/Economia/img/VariacionLeydeDemanda.jpg" /></p>
+<p>este analisis solo es correcto para los bienes normales, que ne general son la mayoria. <br />
+Aquellos biene s y servicios que no responden a este comportamiento son denominados bienes inferiores. <br />
+Los dos anterirores(Normales e inferiores) son aquellos bienes relacionados con las variaciones del ingreso.<br />
+Los bienes sustitutos y los complementarios, son aquellos que estan relacionados con modificaciones en los precios de otros bienes, Ej.: la carne un bien sustituto seria el pollo, el cerdo, el pescado.<br />
+Bienes complementarios: Cuando los precios del bien que se analiza arrastra el consumo de otros bienes</p>
+<h3 id="cambios-en-las-expectativas-del-consumidor"><a name="user-content-cambios-en-las-expectativas-del-consumidor" href="#cambios-en-las-expectativas-del-consumidor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Cambios en las Expectativas del consumidor</h3>
+<ul>
+<li><strong>Incertidumbre</strong>: inseguridad o dudasobre el resultado futuro de un acontecimiento. A diferencia del riesgo, no se conoce la probabilidad de ocurrencia.</li>
+<li><strong>Venta/Compra de Departamentos</strong></li>
+</ul>
+<h3 id="cambios-en-el-numero-o-composicion-de-los-consumidores"><a name="user-content-cambios-en-el-numero-o-composicion-de-los-consumidores" href="#cambios-en-el-numero-o-composicion-de-los-consumidores" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Cambios en el numero o composicion de los consumidores</h3>
+<p>Ej: Guerra mundial</p>
+<h3 id="cambios-en-los-gustos-del-consumidor"><a name="user-content-cambios-en-los-gustos-del-consumidor" href="#cambios-en-los-gustos-del-consumidor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Cambios en los gustos del consumidor</h3>
+<p>Ej: Cambio de modas.</p>
+<h2 id="elasticidad"><a name="user-content-elasticidad" href="#elasticidad" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Elasticidad</h2>
+<p>Hasta ahora solo analizamosmovimientos sobre la curva y cambios de direccion a la derecha y a la izquierda, pero no se hablo de la magnitud del cambio. La Elasticidad se encarga de analizar esa magnitud.</p>
+<p>Elasticidad precio: la demanda es elastica cuando el cambio porcentual en la cantidad demandada es mayor que el cambio en el precio. La demanda es inelastica cuando el cambio porcentual de la cantidad demandada es menor que el cambio porcentual en el precio<br />
+Ej: La nafta y el pan</p>
+<p>Elasticidad ingreso: se debe hacer el mismo analisis que en el anterior analizando la variacion porcentual en el ingreso del consumidor.</p>
+<p><strong>Segun los datos del INDEC, seobservo que:</strong></p>
+<ol>
+<li>Compra de Alimentos, Bebidas, Productos de limpieza, Aumento 3,6%(jun 2015-jun 2016, jun 2016-jun 2017)</li>
+<li>Mismo periodo, facturacion Comerciantes disminuyo 2,5%</li>
+<li>Mismo periodo, Los salarios estuvieron congelados, los precios bajaron Promedio 5,8%.</li>
+<li>Mismo periodo, aumento el VOlumen de Compras de la forma; 2,3% en hipers- 4,1% supers - 4,8% negocios chicos</li>
+<li>Los Alimentos en Particular, Manifestarion una suba en el volumen de ventas ~ 4%.</li>
+<li>Mismo periodo, se compro un 3,3% mas de bebidas. Los Jugos y aguas minerales, aprovechando una caida de precios de 9,2%, Fueron Consumidas un 4,9% mas. Las alcoholicas cayeron 1,1%.</li>
+<li>Los Productos de limpieza, que fueron antes afectados por al recesion, sufrieron una suba en el consumo de 6,3%. Se vendieron 10,6% mas de papel higenico, cuando los precios bajaron 3,5%.</li>
+</ol>
+<p><strong>Se Pide:</strong><br />
+1. El condumo de alimentos, bebidas y productos de limpieza. Es elastico-inelastico-unitario? Justificar<br />
+2. Mismo analisis para el papel higenico. Justificar.<br />
+3. El consumo de bebidas no alcoholicas: Que elasticidad presenta ante los cambios en los precios? Justificar</p>
+<p><strong>Respuestas:</strong></p>
+<ol>
+<li>
+<p>El movimiento que podemos observar en la grafica denota que la misma, es inelastica ya que la misma es debido a que la variacion de precios(5.80%) es mayor a la variacion de Demandada(3.60%).</p>
+</li>
+<li>
+<p>El movimiento que podemos observar en la grafica, denota que la misma es elastica ya que la variacion de la Demanda es de (10,60%) es mayor a la variacion del Precio(3,50%).</p>
+</li>
+<li>
+<p>El movimiento que podemos observar en la grafica, denota que en la misma, la variacion del precio es elastoca, ya que los sueldos no tiene variacion pero la compra de bebidas no alcoholicas si varia.</p>
+</li>
+</ol>
+<h1 id="la-produccion-la-oferta"><a name="user-content-la-produccion-la-oferta" href="#la-produccion-la-oferta" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>La Produccion / La Oferta</h1>
+<p>Es el comportamiento de los productores de bienes y servicios.</p>
+<ul>
+<li>Los recursos surgen de:<ol>
+<li>Insumos -&gt; Suma de insumos: Capital</li>
+<li>Trabajo</li>
+</ol>
+</li>
+</ul>
+<h2 id="posibilidades-de-la-produccion"><a name="user-content-posibilidades-de-la-produccion" href="#posibilidades-de-la-produccion" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Posibilidades de la Produccion</h2>
+<ol>
+<li>Existen siempre combinacion de insumos Ej: produccion de jugo de naranja. En esta combinacion no se busca analizar que es lo mas barato; sino que es posible.</li>
+<li>Combinacion de Insumos y Trabajo: En este item aparece una decision tecnica significativo, Cuanto trabajo humano?, Cuanto trabajo de maquina? Si se utiliza mas trabajo humano se llama <strong>Economia de Producion Intensiva</strong> , y al revez se llama <strong>Economia de Capital Instensiva</strong>.</li>
+</ol>
+<h2 id="frontera-de-posibilidades-de-produccion"><a name="user-content-frontera-de-posibilidades-de-produccion" href="#frontera-de-posibilidades-de-produccion" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Frontera de Posibilidades de Produccion</h2>
+<p>Cuando se analiza una economia de magnitud significativa(Municipal, Provincial, Nacional, Regional) existen algunas combinaciones posibles de bienes a producir, mientras que otras no son posibles. A los efectos de analizar y entender este punto, simplificamos el analisis en la combinacion entre bienes de consumo y bienes de capital.</p>
+<ul>
+<li>Condicionantes para la representacion grafica: <ol>
+<li>Primero un periodo de tiempo determinado(Ej: 1 mes).</li>
+<li>Los recursos, tanto de capital como de trabajo son fijos durante ese periodo de tiempo tanto en cantidad como en calidad.</li>
+<li>El conjunto de disponibilidades tecnologicas se consideran fijas durante el periodo en cuestion.</li>
+</ol>
+</li>
+</ul>
+<p>Con esas condiciones se establece la siguiente curva.</p>
+<p><img alt="Curva de Frontera de Posibilidades de Produccion" src="/run/media/martin/Shared/Carpetas/Economia/img/CdFPP.jpeg" /></p>
+<ul>
+<li>
+<p>Que significa la curva de FPP?</p>
+<ul>
+<li>Muestra las diferentes combinaciones de los dos tipos de bienes al utilizar en forma eficiente la totalidad de los recursos; La eficiencia viene dada cuando ningun cambio en la manera de combinar los recursos podria incrementar la produccion de un tipo de bien sin disminuir la produccion de otro bien.</li>
+</ul>
+</li>
+<li>
+<p>Que significa la ineficiencia?</p>
+<ul>
+<li>Indica que algun o algunos recursos estan ociosos o no se estan utilizando a su plena capacidad.</li>
+</ul>
+</li>
+<li>
+<p>Que pasa con los puntos de produccion inalcanzables?</p>
+<ul>
+<li>Son aquellos sectores de la grafica que con la actual dotacion de recursos y con la presente disponibilidad tecnologica, no es posible producir esa combinacion.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Curva de Frontera de Posibilidades con Puntos inalcanzables y de ineficiencia" src="/run/media/martin/Shared/Carpetas/Economia/img/CdFPP-con-puntos-IeI.jpeg" /></p>
+<ul>
+<li>Se puede desplazar la FPP?<ol>
+<li>Cambio en la diponibilidad de los recursos, tanto de capital como de trabajo<ul>
+<li>Causas:<ul>
+<li>Aumento de horas de trabajo(Hs. Extra)</li>
+<li>Aumento de la fuerza laboral</li>
+<li>Incremento en disponibilidad de un recurso (Nuevo yasimiento petroleo)</li>
+<li>Disminucion Fuerza laboral (Emigracion-Epidemias)</li>
+<li>Disminucion Recursos Disponibles(Naaturaleza, Agotamiento yasimientp)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cambio Tecnologico<ul>
+<li>Causas:<ul>
+<li>Nueva tecnologia que emplea mas eficientemente los recursos (capital y/o trabajo)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p><img alt="Desviacion Curva Frontera de Posibilidades de Produccion" src="/run/media/martin/Shared/Carpetas/Economia/img/DdCFPP.jpeg" /></p>
+<h2 id="la-funcion-de-produccion"><a name="user-content-la-funcion-de-produccion" href="#la-funcion-de-produccion" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>La Funcion de Produccion</h2>
+<p>Para la FPP, relacionamos CAPITAL-TRABAJO-TECNOLOGIA.</p>
+<p>Para la F de Produccion, analizaremos como <strong>CADA INSUMO</strong>(sea capital o Trabajo) influye en la Produccion de un bien/servicio.</p>
+<p>Se trabaja CETERIS PARIBUS(Constantes los otros recursos y la Tecnologia)</p>
+<p>Ejemplo: Produccion de Trigo</p>
+<ul>
+<li>Existencia: 8 Parcelas de 10 Ha c/u</li>
+<li>Mano de Obra: 1ra = 1, 2da=2,etc.</li>
+<li>Resultado:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parcela Nro</th>
+<th>Nro Trabajadores</th>
+<th>Produccion Total(Kg)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>24</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>39</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>52</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+<td>61</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6</td>
+<td>64</td>
+</tr>
+<tr>
+<td>7</td>
+<td>7</td>
+<td>65</td>
+</tr>
+<tr>
+<td>8</td>
+<td>8</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Grafico Ejercicio Produccion Trigo" src="/run/media/martin/Shared/Carpetas/Economia/ejercicios/Produccion-de-Trigo.svg" /></p>
+<p>Se observa en el grafico de produccion que existe un aumento significativo de la misma para aumentar la mano de obra, pero para las ultimas parcelas, no solo decae la velocidad del aumento de la produccion, e incluso disminuye de la parcela 7 a la 8; esto se conoce como la Ley de Rendimientos Decrecientes(Se puede decir que a partir de un momento los trabajadores &ldquo;se molestan&rdquo; y los recursos disponibles son insuficientes).<br />
+Por este motivo incorporamos 2 conceptos mas:<br />
+  * Producto medio: Cociente entre el producto total y la cantidad de insumos utilizados. A propocito de esto se analiza el concepto productividad, que es un indicador del rendimiento que se obtiene de cada factor de produccion; se mide mediante el cociente de la cantidad total de un bien o servicio con un determinado factor utilizado en su produccion.<br />
+  * Producto marginal: Se trata de ver cuanto agrega un nuevo trabajador al producto total.</p>
+<p>Analisis completo:</p>
+<table>
+<thead>
+<tr>
+<th>Parcela</th>
+<th>Nro Trabaj.</th>
+<th>Produccion</th>
+<th>Producto Medio</th>
+<th>Producto Marginal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>10</td>
+<td>10</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>24</td>
+<td>12</td>
+<td>14</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>39</td>
+<td>13</td>
+<td>15</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>52</td>
+<td>13</td>
+<td>13</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+<td>61</td>
+<td>12.5</td>
+<td>9</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6</td>
+<td>64</td>
+<td>10.7</td>
+<td>3</td>
+</tr>
+<tr>
+<td>7</td>
+<td>7</td>
+<td>65</td>
+<td>9.3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>8</td>
+<td>64</td>
+<td>8</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Produccion de trigo completo" src="/run/media/martin/Shared/Carpetas/Economia/ejercicios/Produccion-de-Trigo-completo.JPG" /></p>
+<h2 id="produccion-y-costos"><a name="user-content-produccion-y-costos" href="#produccion-y-costos" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Produccion y Costos</h2>
+<ul>
+<li>Decision de Producir &ldquo;Algo&rdquo; -&gt; juegan una serie de Recursos</li>
+<li>Dentro de las posibilidades Tecnicas -&gt; Productor Elije la mas barata</li>
+<li>Recursos a utilizar: Insumos - Infraestructura - M.O. Para el productior son costos</li>
+<li>Los recursos, adquiridos, duran un tiempo:<ul>
+<li>Largo tiempo: insumos fijos</li>
+<li>insumos variables: varian segun Produccion</li>
+</ul>
+</li>
+<li>Diferencia entre IF e IV: Tiempo para cambiar cantidad de recursos empleados</li>
+<li>Si 1 recurso por lo menos es fijo -&gt; Produccion <strong>Corto Plazo</strong></li>
+<li>Si todos pueden reemplazarse(ninguno es Fijo) -&gt; Produccion <strong>Largo Plazo</strong></li>
+</ul>
+<h3 id="costos"><a name="user-content-costos" href="#costos" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Costos</h3>
+<ul>
+<li>costos = F(Produccion)</li>
+<li>En produccion Corto Plazo:<ul>
+<li>Costos Fijos (Los que pagan por recursos fijos)</li>
+<li>Costos variables(Los que se pagan por recursos Variables)</li>
+</ul>
+</li>
+<li>Costo marginal: Aumento costo total/aumento produccion</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>tn/dia</th>
+<th>Costo Fijo</th>
+<th>M. Obra</th>
+<th>Costo variable</th>
+<th>Costo total</th>
+<th>costo Marginal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>200</td>
+<td>0</td>
+<td>0</td>
+<td>200</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>200</td>
+<td>1</td>
+<td>100</td>
+<td>300</td>
+<td>150</td>
+</tr>
+<tr>
+<td>5</td>
+<td>200</td>
+<td>2</td>
+<td>200</td>
+<td>400</td>
+<td>133.33</td>
+</tr>
+<tr>
+<td>9</td>
+<td>200</td>
+<td>3</td>
+<td>300</td>
+<td>500</td>
+<td>125</td>
+</tr>
+<tr>
+<td>12</td>
+<td>200</td>
+<td>4</td>
+<td>400</td>
+<td>600</td>
+<td>200</td>
+</tr>
+<tr>
+<td>14</td>
+<td>200</td>
+<td>5</td>
+<td>500</td>
+<td>700</td>
+<td>250</td>
+</tr>
+<tr>
+<td>15</td>
+<td>200</td>
+<td>6</td>
+<td>600</td>
+<td>800</td>
+<td>800</td>
+</tr>
+</tbody>
+</table>
+<h2 id="la-oferta"><a name="user-content-la-oferta" href="#la-oferta" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>La Oferta</h2>
+<p>Esta relacionada con el comportamiento de los oferentes de bienes y servicios(o productores) tambien para analizar su comportamiento debemos hacer lo mismo que con la demanda(situacion ceteris palibus).<br />
+Bajo estas condiciones, hay 2 motivos para ofrecer mas bienes y servicios a la venta:</p>
+<ol>
+<li>Precio del bien aumenta, precio de los demas bienes permanecen constantes: Productor esta dispuesto a ofrecer dicho bien(Un productor con 2 bienes, uno de ellos aumenta- A quien le dedica mas tiempo y mas recursos?).</li>
+<li>A mayores precios, aumenta la posibilidad del productor de ofrecer el bien.(recodar concepto de costo marginal), por lo tanto un precio mayor permitira al productor mayores utilidades, y en consecuencia, posibilidad efectiva de producir el bien</li>
+</ol>
+<p><img alt="Relacion P-Q" src="/run/media/martin/Shared/Carpetas/Economia/img/RelacionPQ.jpeg" /></p>
+<p>La grafica anteriro(Relacion P-Q)<br />
+muestra variacion a lo largo de la curvabajo condicion CT, esta es:<br />
+No hay variacion de:</p>
+<ol>
+<li>Tecnologia</li>
+<li>Precios de los recursos</li>
+<li>3 precios de los bienes alternaticos</li>
+<li>Expectativas de los productores</li>
+<li>Numero de Productores</li>
+</ol>
+<h2 id="el-mercado-lugar-de-encuentro-entre-oferta-y-demanda"><a name="user-content-el-mercado-lugar-de-encuentro-entre-oferta-y-demanda" href="#el-mercado-lugar-de-encuentro-entre-oferta-y-demanda" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>El Mercado: Lugar de encuentro entre oferta y demanda.</h2>
+<p>En la antiguedad mercado era un lugar fisico, hoy si bien existen algunos(feria), conceptualmente mercado es un mecanismo que coordina las intenciones independientes de compradores(demanda) y vendedores(oferta).<br />
+A modo de analisis y a efectos de concretar este concepto, analizemos el caso jugo natural envasado.</p>
+<p><img alt="Jugo natural" src="/run/media/martin/Shared/Carpetas/Economia/img/jugoNatural.jpeg" /></p>
+<p>El exedente tiene como efecto presionar el precio hacia abajo<br />
+La escasez tiene como efecto presionar el precio hacia arriba</p>
+<h3 id="mercado-segun-numero-participantes"><a name="user-content-mercado-segun-numero-participantes" href="#mercado-segun-numero-participantes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mercado segun numero participantes</h3>
+<table>
+<thead>
+<tr>
+<th>oferta\demanda</th>
+<th>uno solo</th>
+<th>pocos</th>
+<th>muchos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uno solo</td>
+<td>Monopolio Bilateral</td>
+<td>Monopolio Parcial</td>
+<td>Monopolio</td>
+</tr>
+<tr>
+<td>pocos</td>
+<td>Monopolio Parcial</td>
+<td>Oligopolio Bilateral</td>
+<td>Oligopolio</td>
+</tr>
+<tr>
+<td>muchos</td>
+<td>Monopsonio</td>
+<td>Oligopsonio</td>
+<td>Competencia Perfecta</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Graficos Variacion Oferta Y Demanda" src="/run/media/martin/Shared/Carpetas/Economia/img/GraficosVariacionOfertaDemanda.jpeg" /></p>
+<h2 id="macroeconomia"><a name="user-content-macroeconomia" href="#macroeconomia" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Macroeconomia</h2>
+<p>PBI(Producto Bruto Interno): Es el valor de mercado de todos los bienes y servicios finales producidos dentro de un paisen un periodo determinado, usualmente 1 anio; El PBI mide lo producido dentro de la economia de un pais sin importar quien es el duenio de la produccion.<br />
+EL tamanio del PBI es importante por 2 motivos:<br />
+    1. Es una medida de bienestar economico de una sociedad.<br />
+    2. Es una medida del ingreso de la economia; por eso se suele llamar produto o ingreso nacional.</p>
+<p>Los componentes del PBI son:<br />
+<code>PBI=C+I+(X-M)</code></p>
+<ul>
+<li><code>C</code>: El consumo del PBI, incluye el privado como el publico. </li>
+<li><code>I</code>: Inversion, valor de los bienes producidos por los privados y el estado para obtener consumo futuro</li>
+<li><code>X</code>: Exportaciones netas, </li>
+<li><code>M</code>: Importaciones</li>
+</ul>
+<p>PBI per capita, es el cociente entre el PBI y la cantidad de habitantes de un pais determinado:<br />
+<code>PBIpc=PBI/P</code><br />
+* <code>P</code>: Cantidad de habitantes</p>
+<h3 id="sector-externo-balanza-de-pagos"><a name="user-content-sector-externo-balanza-de-pagos" href="#sector-externo-balanza-de-pagos" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sector Externo: Balanza de pagos</h3>
+<ul>
+<li>Cuentas externas: Son un conjunto de indicadores que muestran la relacion de la economia local con todas las demas economias del mundo. Todas las cuentas externas se incluyen en la denominada balanza de pago.</li>
+<li>Balanza de pagos: registro sistematico de todas las transacciones economicas efectivamente realizadas durante un periodo determinado de tiempo, 1 anio, entre los residentes de un pais y residentes del resto del mundo. Sus componentes de la balanza de pago son:</li>
+<li>Balanza comercial: Indica el saldo del comercio de bienes(mercaderias) entre la economia local y el resto del mundo; es la diferencia entre exportaciones e importaciones.</li>
+<li>Cuenta corriente: Incluye saldo de la balanza comercial, resultado del comercio de servicios(ej: Fletes, seguros y otros costos en el comercio exterior) , las rentas a la inversion y transferencias(ej: remision de fondos de extranjeros residentes del pais al exterior)</li>
+<li>Cuenta de Capitales: Muestra el saldo de los movimientos de capital entre una economia y el resto del mundo.</li>
+</ul>
+<h3 id="clasificacion-estadistica-economica-argentina-de-las-exportaciones-e-importaciones"><a name="user-content-clasificacion-estadistica-economica-argentina-de-las-exportaciones-e-importaciones" href="#clasificacion-estadistica-economica-argentina-de-las-exportaciones-e-importaciones" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Clasificacion Estadistica Economica Argentina de las Exportaciones e Importaciones</h3>
+<h4 id="exportaciones"><a name="user-content-exportaciones" href="#exportaciones" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Exportaciones</h4>
+<ul>
+<li>Productos Primarios: Son todo los productos que no poseen un proceso de manufactura. </li>
+<li>MOA(Manufacturas de Origen Agropecuario): todo producto que tenga origen Agropecuario y un proceso de manufactura</li>
+<li>MOI(Manufacturas de Origen Industrial): todo producto que tenga origen Industrial y un proceso de manufactura </li>
+<li>Combustibe y Energia: son ventas de Petroleo, gas natural o electricidad</li>
+</ul>
+<h4 id="importaciones"><a name="user-content-importaciones" href="#importaciones" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Importaciones</h4>
+<ul>
+<li>Bienes de Capital: Maquinas o plantas industriales adquiridas en el exterior.</li>
+<li>Bienes Intermedios: Insumos necesarios para la produccion(ej: Productos quimicos, fibras textiles, materiales de construccion)</li>
+<li>Combustibles: Combustibles que se adquieren en el exterior y el pais no produce.</li>
+<li>Piezas y accesorios P/Bienes de Capital: Ej: Reemplazos o herramientas para los bienes de capital</li>
+<li>Bienes de Consumo: Cualquier producto destinado al consumidor final.</li>
+<li>Vehiculos Automotores de Pasajeros: cualquier vehiculo fabricado en el exterior y vendido en consecionarias.</li>
+</ul>
+<h3 id="sector-publico-recursos-y-gastos"><a name="user-content-sector-publico-recursos-y-gastos" href="#sector-publico-recursos-y-gastos" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sector Publico: Recursos y Gastos</h3>
+<p>Los gastos e ingresos del gobierno, estan contenidos en el presupuesto de la administracion publica, que es: </p>
+<ul>
+<li>Un importante documento contable.</li>
+<li>Es una ley de la nacion.</li>
+</ul>
+<p>Si los ingresos y egresos coinciden se dice que e lpresupuesto esta equilibrado; pero lo normal es que los gastos sean superiores a los recursos(deficit presupuestario o deficit fiscal); la situacion inversa se denomina superhabit fiscal.<br />
+El estado(Nacional, provincial o municipal) debe comprar bienes y servicios para atender las necesidades publicas, lo que se denomina gasto publico.<br />
+Los gastos del estado nacional se clasifican por rubros y son 9:</p>
+<ol>
+<li>Administracion General</li>
+<li>Defensa</li>
+<li>Seguridad</li>
+<li>Salud</li>
+<li>Educacion</li>
+<li>Desarrollo de la Economia</li>
+<li>Bienestar Social</li>
+<li>Ciencia y Tecnica</li>
+<li>Deuda Publica</li>
+</ol>
+<p>Estos gastos pueden ser corrientes u operativos is se le destina al normal funcionamiento de los servicios publicos y para el mantenimiento del patrimonio publico.<br />
+Se denomina gastos de capital cuando contribuyen a aumentar el patrimonio publico.</p>
+<h3 id="sistema-tributario-argentino"><a name="user-content-sistema-tributario-argentino" href="#sistema-tributario-argentino" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sistema Tributario Argentino</h3>
+<p>Para poder complementar lo previsto en el presupuesto, existen 2 formas de financiar el gasto publico:<br />
+- Impuestos(Impuestos, Tasas, Contribuciones):<br />
+    - Impuestos: son fijados por ley y no necesitan de un servicio o contra prestacion para ser cobrado. Ej: IVA: todos los argentinos aun cuando no se tienen ingresos en cuanquier compra se paga. Impuesto a las ganancias.<br />
+    - Tasas: Tributos que se exigen por prestar un determinado servicio publico.<br />
+    - Contribuciones: Son tributos que se cobran para analizar una obra especifica o para cumplir con bienes sociales o economicos. Por ejemplo cierre del anillo de la circumbalacion.<br />
+- Deuda</p>
+<p>Desde el punto de vista economico los impuestos se clasifican en funcion:</p>
+<ul>
+<li>de los ingresos</li>
+<li>del patrimonio</li>
+<li>del consumo</li>
+</ul>
+<p>Los impuestos deben ser:</p>
+<ul>
+<li>directos: cuando no es posible trasladarlos a los otros</li>
+<li>indirectos: cuando si se pueden trasladar</li>
+</ul>
+<p>tambien se clasifican como:</p>
+<ul>
+<li>fijos: recaudan sumas fijas. Ej: impuesto a los sellos</li>
+<li>proporcionales: aplican una misma tasa. Ej: IVA 21%.</li>
+<li>progresivos: la tasa o alicuota aumenta a medida que aumenta el monto sujeto a tributar impuestos. Ej: Impuesto a las ganancias.</li>
+</ul></article></body></html>
